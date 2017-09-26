@@ -1,0 +1,23 @@
+{
+  "name": "pelucheblasfemibot",
+  "version": "0.1.0",
+  "description": "https://t.me/pelucheblasfemibot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/pitasi/pelucheblasfemibot.git"
+  },
+  "author": "Brinante, Zaphodias",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/pitasi/pelucheblasfemibot/issues"
+  },
+  "homepage": "https://gitlab.com/pitasi/pelucheblasfemibot#README",
+  "dependencies": {
+    "telegraf": "^3.11.1"
+  }
+}
