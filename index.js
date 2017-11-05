@@ -28,6 +28,13 @@ function sendReply(ctx, reply) {
     reply_to_message_id: getReplyToMessageId(ctx)
   })
 }
+
+bot.command('lista', (ctx) => {
+    ctx.reply(
+        'Digita una delle seguente parole:\n\n' +
+        Object.keys(replies).join('\n')
+    )
+})
  
 bot.on('text', (ctx) => {
   let cmd = ctx.message.text.toLowerCase()
