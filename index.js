@@ -31,7 +31,7 @@ function sendReply(ctx, reply) {
 
 bot.command('lista', (ctx) => {
     ctx.reply(
-        'Digita una delle seguente parole:\n\n' +
+        'Digita una delle seguenti parole:\n\n' +
         Object.keys(replies).join('\n')
     )
 })
