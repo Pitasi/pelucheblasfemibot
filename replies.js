@@ -56,4 +56,13 @@ module.exports = {
   "dio the": { type: 'sticker', id: 'CAADBAAD9BAAAmpj7wTuxBD0BkZH4wI' },
   "madonna troia": { type: 'sticker', id: 'CAADBAAD5RAAAmpj7wRBM7SPgAONegI' },
   "porco": { type: 'sticker', id: 'CAADBAAD4xAAAmpj7wQG8WXcYUZ3iwI' },
+  "sagra": { type: 'sticker', id: 'CAADBAADOREAAmpj7wQhTAEVjaF0EwI' },
+  "sei un mongolo": { type: 'sticker', id: 'CAADBAADOhEAAmpj7wQ196EDttAt1gI' },
+  "me ne frego": { type: 'sticker', id: 'CAADBAADOxEAAmpj7wRiV2IMgV2_VQI' },
+  "ma sei tordo": { type: 'sticker', id: 'CAADBAADPBEAAmpj7wTFUjpZpMpoOQI' },
+  "muso": { type: 'sticker', id: 'CAADBAADPREAAmpj7wSdCt5gkAE0lwI' },
+  "noci": { type: 'sticker', id: 'CAADBAADPhEAAmpj7wQBhW37hL7sbAI' },
+  "seghe": { type: 'sticker', id: 'CAADBAADPxEAAmpj7wTqPtepNWPOXwI' },
+  "baciame er culo": { type: 'sticker', id: 'CAADBAADQBEAAmpj7wR5IqWBZHSkcQI' },
+  "piango": { type: 'sticker', id: 'CAADBAADQREAAmpj7wRhD8CwgUzLSgI' },
 }
