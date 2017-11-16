@@ -39,7 +39,7 @@ module.exports = {
   "stop this": { type: 'sticker', id: 'CAADBAADEBEAAmpj7wT5g7R5oR-XuAI' },
   "e invece": { type: 'sticker', id: 'CAADBAADAxEAAmpj7wRY4UQf-J05JwI' },
   "cugliun": { type: 'sticker', id: 'CAADBAADDBEAAmpj7wR23AdActegTAI' },
-  "ok": { type: 'sticker', id: 'CAADBAAD_BAAAmpj7wQAAUAi-et-2h0C' },
+  "o k": { type: 'sticker', id: 'CAADBAAD_BAAAmpj7wQAAUAi-et-2h0C' },
   "n o": { type: 'sticker', id: 'CAADBAADAhEAAmpj7wSBRgo3Cy_x2gI' },
   "errato": { type: 'sticker', id: 'CAADBAADDxEAAmpj7wSDX3jSS0FaVgI' },
   "falso": { type: 'sticker', id: 'CAADBAAD9xAAAmpj7wTxBcbQ3PN4OwI' },
