@@ -1,6 +1,4 @@
 pipeline:
-  docker:
+  publish:
     image: plugins/docker
     repo: pitasi/pelucheblasfemibot
-    dockerfile: Dockerfile
-    tags: latest
