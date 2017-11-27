@@ -1,0 +1,6 @@
+pipeline:
+  docker:
+    image: plugins/docker
+    repo: git@gitlab.com:pitasi/pelucheblasfemibot.git
+    dockerfile: Dockerfile
+    tags: latest
