@@ -10,3 +10,4 @@ pipeline:
     url: http://evilcorp.gq:8080
     service: ap-generic/pelucheblasfemibot
     docker_image: pitasi/pelucheblasfemibot:latest
+    secrets: [ RANCHER_ACCESS_KEY, RANCHER_SECRET_KEY ]
