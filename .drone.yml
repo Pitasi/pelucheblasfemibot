@@ -1,8 +1,7 @@
 pipeline:
   build_image:
     image: docker
-    privileged: true
     commands:
-      - docker build pitasi/pelucheblasfemibot
+      - docker build . -t pitasi/pelucheblasfemibot
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
