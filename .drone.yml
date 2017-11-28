@@ -1,4 +1,4 @@
 pipeline:
   push_image:
     image: plugins/docker
-    repo: localhost:5000/pitasi/pelucheblasfemibot
+    repo: localregistry:5000/pitasi/pelucheblasfemibot
