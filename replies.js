@@ -2,6 +2,7 @@ module.exports = {
   // gifs
   "ebete": { type: 'gif', id: 'CgADBAADUQEAAmwOuFBmTOzUIz9ElAI' },
   "gabice": { type: 'gif', id: 'CgADBAADHQEAAisxKFG403Uvb_7mbwI' },
+  "node": { type: 'gif', id: 'CgADBAADLQIAAlnKaVMm_HsznW30oQI' },
 
   // stickerzzz
   "bravo": { type: 'sticker', id: 'CAADBAADHxEAAmpj7wTIWvUa0fLgpQI' },
