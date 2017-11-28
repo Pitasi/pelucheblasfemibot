@@ -2,3 +2,4 @@ pipeline:
   publish:
     image: plugins/docker
     repo: pitasi/pelucheblasfemibot
+    dryrun: true
