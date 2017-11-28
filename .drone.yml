@@ -1,5 +1,7 @@
 pipeline:
   build_image:
+    image: docker
+    privileged: true
     commands:
       - docker build pitasi/pelucheblasfemibot
     volumes:
