@@ -1,6 +1,5 @@
 pipeline:
   build_image:
-    image: docker
     commands:
       - docker build pitasi/pelucheblasfemibot
     volumes:
