@@ -1,7 +1,4 @@
 pipeline:
-  build_image:
-    image: docker
-    commands:
-      - docker build . -t pitasi/pelucheblasfemibot
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+  push_image:
+    image: plugins/docker
+    repo: localhost:5000/pitasi/pelucheblasfemibot
