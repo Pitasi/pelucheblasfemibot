@@ -2,6 +2,11 @@ pipeline:
   build_image:
     image: docker
     commands:
-      - docker build . -t pitasi/pelucheblasfemibot
+      - docker build . -t pitasi/pelucheblasfemibot:latest
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+  update_rancher:
+    image: peloton/drone-rancher
+    url: http://evilcorp.gq:8080
+    service: ap-generic/pelucheblasfemibot
+    docker_image: pitasi/pelucheblasfemibot:latest
