@@ -1,5 +1,7 @@
 pipeline:
-  publish:
-    image: plugins/docker
-    repo: pitasi/pelucheblasfemibot
-    dry_run: true
+  build_image:
+    image: docker
+    commands:
+      - docker build pitasi/pelucheblasfemibot
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
