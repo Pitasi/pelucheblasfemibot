@@ -37,7 +37,7 @@ module.exports = {
   "boh": { type: 'sticker', id: 'CAADBAADHhEAAmpj7wTJRdAhfOpYuAI' },
   "te movi": { type: 'sticker', id: 'CAADBAADHREAAmpj7wT-Ky1-sVCmrgI' },
   "se vedemo": { type: 'sticker', id: 'CAADBAADKhEAAmpj7wReSZ5pxMGKOgI' },
-  "bugs": { type: 'sticker', id: 'CAADBAADGBEAAmpj7wQVeutrUjUe1QI' },
+  "ma": { type: 'sticker', id: 'CAADBAADGBEAAmpj7wQVeutrUjUe1QI' },
   "stop this": { type: 'sticker', id: 'CAADBAADEBEAAmpj7wT5g7R5oR-XuAI' },
   "e invece": { type: 'sticker', id: 'CAADBAADAxEAAmpj7wRY4UQf-J05JwI' },
   "cugliun": { type: 'sticker', id: 'CAADBAADDBEAAmpj7wR23AdActegTAI' },
@@ -67,4 +67,6 @@ module.exports = {
   "seghe": { type: 'sticker', id: 'CAADBAADPxEAAmpj7wTqPtepNWPOXwI' },
   "baciame er culo": { type: 'sticker', id: 'CAADBAADQBEAAmpj7wR5IqWBZHSkcQI' },
   "piango": { type: 'sticker', id: 'CAADBAADQREAAmpj7wRhD8CwgUzLSgI' },
+  "...": { type: 'sticker', id: 'CAADBAADTxEAAmpj7wQ4LREtDht6_QI' },
+  "eh": { type: 'sticker', id: 'CAADBAADExEAAmpj7wTeaxt_JTxLJgI' },
 }
