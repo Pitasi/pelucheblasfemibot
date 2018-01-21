@@ -107,4 +107,8 @@ module.exports = {
   "ti legno": { type: 'sticker', id: 'CAADBAADbhEAAmpj7wQFFqIBPHBLygI' },
   "ma crepa": { type: 'sticker', id: 'CAADBAADbxEAAmpj7wT0I37Ra9ddEwI' },
   "ritirati": { type: 'sticker', id: 'CAADBAADchEAAmpj7wRqRWd67ThfmQI' },
+  "n'culat": { type: 'sticker', id: 'CAADBAADcxEAAmpj7wSbm3GS3Kyr6gI' },
+  "tachete": { type: 'sticker', id: 'CAADBAADdBEAAmpj7wTZhufaBwZZPwI' },
+  "seh ciao": { type: 'sticker', id: 'CAADBAADdREAAmpj7wSVOsPbQ5cnNwI' },
+  "largo": { type: 'sticker', id: 'CAADBAADdhEAAmpj7wT7fa-4W7pvYAI' },
 }
