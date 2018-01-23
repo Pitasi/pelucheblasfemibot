@@ -111,4 +111,9 @@ module.exports = {
   "tachete": { type: 'sticker', id: 'CAADBAADdBEAAmpj7wTZhufaBwZZPwI' },
   "seh ciao": { type: 'sticker', id: 'CAADBAADdREAAmpj7wSVOsPbQ5cnNwI' },
   "largo": { type: 'sticker', id: 'CAADBAADdhEAAmpj7wT7fa-4W7pvYAI' },
+  "lesto": { type: 'sticker', id: 'CAADBAADeREAAmpj7wRglaP9m2VIvAI' },
+  "bonzo": { type: 'sticker', id: 'CAADBAADeBEAAmpj7wTsPTEQbiYFbwI' },
+  "playa": { type: 'sticker', id: 'CAADBAADehEAAmpj7wSx2JBg1hyUhAI' },
+  "aia": { type: 'sticker', id: 'CAADBAADexEAAmpj7wTmNZ_bludd7wI' },
+  "cristo culo": { type: 'sticker', id: 'CAADBAADdxEAAmpj7wQYYrgioZL8BwI' },
 }
