@@ -25,7 +25,7 @@ function sendReply(ctx, reply) {
   else throw new Error('Tipo di risposta non valido.')
   
 
-  ctx.deleteMessage(ctx.chat.id, ctx.message.message_id).catch(() => {})
+  ctx.telegram.deleteMessage(ctx.chat.id, ctx.message.message_id).catch(() => {})
   replyMethod(reply.id, {
     reply_to_message_id: getReplyToMessageId(ctx)
   })
