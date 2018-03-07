@@ -23,7 +23,9 @@ function sendReply(ctx, reply) {
   else if (reply.type === 'sticker')
     replyMethod = ctx.replyWithSticker
   else throw new Error('Tipo di risposta non valido.')
- 
+  
+
+  ctx.deleteMessage(ctx.chat.id, ctx.message.message_id).catch(() => {})
   replyMethod(reply.id, {
     reply_to_message_id: getReplyToMessageId(ctx)
   })
