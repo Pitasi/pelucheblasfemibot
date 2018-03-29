@@ -49,6 +49,24 @@ bot.command('lista', (ctx) => {
         Object.keys(replies).join('\n')
     )
 })
+
+bot.command('delete', ctx => {
+  if (!ctx.state.isAdmin) {
+      return;
+  }
+  
+  const text = ctx.message.text
+  const splitIdx = text.indexOf(' ')
+  const trigger = splitIdx !== -1 && text.substr(splitIdx+1)
+
+  if (trigger) {
+      delete replies[trigger]
+      fs.writeFileSync('./replies.json', JSON.stringify(replies), 'utf-8');
+      ctx.reply('Trigger removed :)')
+  } else {
+      ctx.reply('Usage: /delete <trigger>')
+  }
+})
  
 bot.on('text', (ctx) => {
   if (ctx.state.isPrivate && ctx.state.isAdmin && ctx.message.reply_to_message && ctx.message.reply_to_message.sticker) {
