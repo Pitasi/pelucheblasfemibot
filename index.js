@@ -1,7 +1,6 @@
 const Telegraf = require('telegraf');
 const fs = require('fs');
 
-const token = 'API KEY';
 const bot = new Telegraf(process.env.TOKEN);
 const admins = process.env.ADMINS ?
   process.env.ADMINS.split(',').map(s => (parseInt(s.trim(), 10))) :
@@ -84,4 +83,10 @@ bot.on('text', (ctx) => {
     sendReply(ctx, replies[cmd])
 });
 
-bot.startPolling();
+
+
+if (process.env.WEBHOOK) {
+  bot.startWebhook('/'+token, null, 443)
+} else {
+  bot.startPolling();
+}

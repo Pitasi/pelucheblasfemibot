@@ -1,5 +1,7 @@
 FROM library/node:alpine
 
+EXPOSE 443
+
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
