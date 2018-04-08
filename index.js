@@ -1,7 +1,8 @@
 const Telegraf = require('telegraf');
 const fs = require('fs');
 
-const bot = new Telegraf(process.env.TOKEN);
+const token = process.env.TOKEN
+const bot = new Telegraf(token);
 const admins = process.env.ADMINS ?
   process.env.ADMINS.split(',').map(s => (parseInt(s.trim(), 10))) :
   [];
