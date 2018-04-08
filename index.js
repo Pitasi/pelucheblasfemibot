@@ -80,13 +80,15 @@ bot.on('text', (ctx) => {
   }
 
   let cmd = ctx.message.text.toLowerCase()
-  if (cmd in replies)
+  if (replies.hasOwnProperty(cmd))
     sendReply(ctx, replies[cmd])
 });
 
 
 
 if (process.env.WEBHOOK) {
+  console.log('Starting webhook server')
+  bot.telegram.setWebhook(process.env.WEBHOOK+'/'+token)
   bot.startWebhook('/'+token, null, 443)
 } else {
   bot.startPolling();
