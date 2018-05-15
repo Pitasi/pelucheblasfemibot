@@ -8,13 +8,6 @@ const admins = process.env.ADMINS ?
   [];
 const replies = require('./replies');
  
-// Restituisce l'id del messaggio di risposta se c'è,
-// altrimenti restituisce null
-function getReplyToMessageId(ctx) {
-  if (ctx.message.reply_to_message)
-    return ctx.message.reply_to_message.message_id;
-  return null;
-}
  
 // Funzione che preso il ctx e un elemento di replies manda la risposta
 // scegliendo il metodo giusto in base al tipo (gif o sticker)
@@ -30,10 +23,10 @@ function sendReply(ctx, reply) {
   else throw new Error('Tipo di risposta non valido.');
   
 
-  ctx.telegram.deleteMessage(ctx.chat.id, ctx.message.message_id).catch(() => {});
   replyMethod(reply.id, {
-    reply_to_message_id: getReplyToMessageId(ctx)
+    reply_to_message_id: ctx.message.reply_to_message ? ctx.message.reply_to_message.message_id : null,
   });
+  ctx.telegram.deleteMessage(ctx.chat.id, ctx.message.message_id).catch(() => {});
 }
 
 bot.use((ctx, next) => {
