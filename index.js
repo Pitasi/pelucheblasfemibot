@@ -16,10 +16,10 @@ function sendReply(ctx, reply) {
  
   // replyMethod sarà la funzione con cui invieremo la risposta,
   // cambia in base al tipo (gif / sticker)
-  if (reply.type === 'gif')
-    replyMethod = ctx.replyWithDocument;
-  else if (reply.type === 'sticker')
+  if (reply.type === 'sticker')
     replyMethod = ctx.replyWithSticker;
+  else if (reply.type === 'gif')
+    replyMethod = ctx.replyWithDocument;
   else throw new Error('Tipo di risposta non valido.');
   
 
@@ -29,13 +29,6 @@ function sendReply(ctx, reply) {
   ctx.telegram.deleteMessage(ctx.chat.id, ctx.message.message_id).catch(() => {});
 }
 
-bot.use((ctx, next) => {
-  ctx.state.isAdmin = admins.indexOf(ctx.from.id) >= 0;
-  ctx.state.isPrivate = ctx.chat.type === 'private';
-
-  next();
-})
-
 bot.command('lista', (ctx) => {
     ctx.reply(
         'Digita una delle seguenti parole:\n\n' +
@@ -44,7 +37,7 @@ bot.command('lista', (ctx) => {
 })
 
 bot.command('delete', ctx => {
-  if (!ctx.state.isAdmin) {
+  if (admins.indexOf(ctx.from.id) < 0) {
       return;
   }
   
@@ -62,7 +55,12 @@ bot.command('delete', ctx => {
 })
  
 bot.on('text', (ctx) => {
-  if (ctx.state.isPrivate && ctx.state.isAdmin && ctx.message.reply_to_message && ctx.message.reply_to_message.sticker) {
+  if (
+      ctx.chat.type === 'private' &&
+      admins.indexOf(ctx.from.id) >= 0 &&
+      ctx.message.reply_to_message &&
+      ctx.message.reply_to_message.sticker
+  ) {
     const id = ctx.message.reply_to_message.sticker.file_id;
     const trigger = ctx.message.text;
 
@@ -72,7 +70,7 @@ bot.on('text', (ctx) => {
     ctx.reply('Trigger saved :)');
   }
 
-  let cmd = ctx.message.text.toLowerCase()
+  const cmd = ctx.message.text.toLowerCase()
   if (replies.hasOwnProperty(cmd))
     sendReply(ctx, replies[cmd])
 });
