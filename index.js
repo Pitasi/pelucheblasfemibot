@@ -6,7 +6,7 @@ const bot = new Telegraf(token);
 const admins = process.env.ADMINS ?
   process.env.ADMINS.split(',').map(s => (parseInt(s.trim(), 10))) :
   [];
-const replies = require('./replies');
+const replies = require('./storage/replies');
  
  
 // Funzione che preso il ctx e un elemento di replies manda la risposta
@@ -47,7 +47,7 @@ bot.command('delete', ctx => {
 
   if (trigger) {
       delete replies[trigger]
-      fs.writeFileSync('./replies.json', JSON.stringify(replies), 'utf-8');
+      fs.writeFileSync('./storage/replies.json', JSON.stringify(replies), 'utf-8');
       ctx.reply('Trigger removed :)')
   } else {
       ctx.reply('Usage: /delete <trigger>')
@@ -65,7 +65,7 @@ bot.on('text', (ctx) => {
     const trigger = ctx.message.text;
 
     replies[trigger] = { "type": "sticker", id };
-    fs.writeFileSync('./replies.json', JSON.stringify(replies), 'utf-8');
+    fs.writeFileSync('./storage/replies.json', JSON.stringify(replies), 'utf-8');
 
     ctx.reply('Trigger saved :)');
   }
