@@ -6,8 +6,12 @@ const bot = new Telegraf(token);
 const admins = process.env.ADMINS ?
   process.env.ADMINS.split(',').map(s => (parseInt(s.trim(), 10))) :
   [];
-const replies = require('./storage/replies');
- 
+let replies = {};
+try {
+  replies = require('./storage/replies');
+} catch (err) {
+  fs.writeFileSync('./storage/replies.json', '{}', 'utf-8');
+}
  
 // Funzione che preso il ctx e un elemento di replies manda la risposta
 // scegliendo il metodo giusto in base al tipo (gif o sticker)
